@@ -45,3 +45,10 @@ body {
 	margin: auto;
 	padding: 7px 25px;
 }
+
+/*id가 signup인 요소의 자손중에 모든 label태그를 가진 요소*/
+#signup label{
+	float: left;
+	font-size: 13px;
+	width: 110px;
+}
