@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+
+        }
+        .origin{
+            width: 150px;
+            height: 180px;
+            border:1px solid black;
+            float: left;
+            margin: 30px;
+        }
+        .origin > div{
+            width: 100px;
+            height: 100px;
+            background-image: url(../images/);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            background-color: orange;
+            transition: all 3s;
+        }
+        #skewx:hover{transform: skewX(55deg);}
+        #skewy:hover{transform: skewY(55deg);}
+        #skewxyz:hover{transform: skew(55deg);}
+  
+     
+
+    </style>
+</head>
+<body>
+    <div id ="container">
+        <div class="origin">
+            <div id="skewx"></div>
+        </div>
+        <div class="origin">
+            <div id="skewy"></div>
+        </div>
+        <div class="origin">
+            <div id="skewxyz"></div>
+        </div>            
+    </div>    
+
+
+    
+
+
+
+
+</body>
+</html>
