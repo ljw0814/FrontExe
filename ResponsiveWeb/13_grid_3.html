@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper1{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 20px;
+        }
+        #wrapper2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            
+        }
+        h1{
+            font-size: 24px;
+        }
+        .items{
+            padding: 15px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd){
+            background-color: #bbb;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>auto-fit일 때</h1>
+    <div id="wrapper1">
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil accusantium debitis.</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+    </div>
+
+    <h1>auto-fill일 때</h1>
+    <div id="wrapper2">
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil accusantium debitis.</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla</div>
+        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+    </div>
+
+    
+
+
+
+
+</body>
+</html>
