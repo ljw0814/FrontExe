@@ -5,36 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul{
-            list-style: none;
-        }
-        li{
-
-            display:inline-block;
-            margin: 10px;
-        }
+        ul{ list-style: none;}
         li a{
-            padding:  5px 20px;
-
-            font-size: 16px;
-            color:blue;
-            text-decoration:none;
-            
-    
+            line-height: 30px;
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
         }
+        /* a요소의 href속성의 값이 hwp로 끝나 요소*/
+        a[href $= hwp]{
+            background: url('../images/hwp_icon.gif') center right no-repeat;
+            padding-right: 25px;
+        }
+        /* a요소의 href속성의 값이 xls로 끝나 요소*/
         a[href $= xls]{
-            brckground: url() center right no - repeat;
-            padding-right:25px;
+            background: url('../images/excel_icon.gif') center right no-repeat;
+            padding-right: 25px;
         }
-
     </style>
 </head>
 <body>
-    <h3>회사 소개 파일 다운받기</h3>
+    <h3>회사 소개 파일 다운 받기</h3>
     <ul>
-        <li><a href="">hwp 파일</a></li>
-        <li><a href="">엑셀 파일</a></li>
+        <li><a href="intro.hwp">hwp 파일</a></li>
+        <li><a href="intro.xls">엑셀 파일</a></li>
     </ul>
-
 </body>
 </html>

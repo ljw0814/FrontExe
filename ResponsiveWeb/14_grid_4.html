@@ -6,28 +6,27 @@
     <title>Document</title>
     <style>
         #wrapper{
-            display: grid;
+            display:grid;
             grid-template-columns: repeat(3, 200px);
             grid-template-rows: minmax(100px, auto);
-            grid-gap: 20px 30px;
+            grid-gap:20px 30px;     /*줄 간격, 컬럼 간격*/
         }
         .items{
-            padding: 15px;
+            padding:15px;
             background-color: #eee;
         }
-        .items:nth-child(2n+1){
-            background-color: #bbb;
-
+        .items:nth-child(odd){
+            background-color:#bbb;
         }
     </style>
 </head>
 <body>
     <div id="wrapper">
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil accusantium debitis.</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="items">Lorem ipsum dolor sit amet</div>
     </div>
 </body>
 </html>

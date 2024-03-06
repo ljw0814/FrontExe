@@ -6,36 +6,28 @@
     <title>Document</title>
     <style>
         #wrapper{
-            display: grid;
-            /*grid-template-columns: repeat(3, 1fr);*/
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: minmax(100px, auto);
-            
+            display:grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: 2fr 1fr 3fr;
+            grid-template-rows: minmax(100px, auto);   /* 줄 높이 최소 100px*/
         }
         .items{
-            padding: 10px;
-            background-color: #eee;
-
+            padding:10px;
+            background-color:#eee;
         }
         .items:nth-child(odd){
-            padding: 10px;
-            background-color: #bbb;
-
+            background-color:#bbb;
         }
     </style>
 </head>
 <body>
     <div id="wrapper">
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil accusantium debitis.</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus impedit dolorem deleniti nihil</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla, nobis ad repellendus</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero excepturi consequuntur quis quia doloribus a dolor saepe non nulla</div>
-        <div class="items">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
-
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="items">Lorem ipsum dolor sit amet</div>
     </div>
-
-
-
-
 </body>
 </html>
