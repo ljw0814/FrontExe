@@ -1,0 +1,45 @@
+<!-- 
+move_fish에서 button을 2개 생성
+1개는 '시작' 버튼
+1개는 '멈춤' 버튼
+
+'시작' 버튼을 누르면 물고기가 자동으로 왕복 움직이도록
+'멈춤' 버튼을 누르면 물고기가 멈추도록 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btnMove{
+        margin-top: 50px;     
+    }
+    #panel{
+        width: 400px;
+        height: 400px;
+        border: 1px solid #999;
+        background-color: rgba(138, 197, 255, 0.87);
+        position:relative;
+    }
+    #fish{
+        width: 150px;
+        position:absolute;
+    }
+</style>
+<script>
+            document.addEventListener('DOMContentLoaded', () => {
+            let $fish = document.querySelector('#fish');
+</script>
+<body>
+    <div id="panel">
+        <img src="../../../images2/fish1.png" id="fish">
+        
+    </div>
+    <div id="nav">
+        <button id="btnMove">움직임</button>
+    </div>
+</body>
+</html>

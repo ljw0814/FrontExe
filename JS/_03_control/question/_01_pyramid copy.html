@@ -20,14 +20,19 @@
         // inputStar : 7
         // &nbsp; : 6
         // * : 1
+        var star = "*";
+        for (let j=0; j < inputStar; j++){
+            
+            for (let i= inputStar -j; i > 1; i--){
+                document.write('&nbsp');
+            }
+            // 3
+            for (let k=0; k < (j*2)+1; k++) {
+                document.write(star);
+            }// *
 
-        var sp = '';
-
-        for(let i=0; i<inputStar;i++){
             document.write('<br>');
-        }
-        document.write('*');
-        document.write('<br>');
+        };
 
 
 
