@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        console.log(typeof []);
+        console.log(typeof []); // 배열도 객체로 취급되므로 콘솔창에 object으로 출력됨
+        console.log(typeof 1);  // 콘솔창: number
+        console.log(typeof '이'); 
 
         const array = ['사과', '바나나', '망고', '딸기'];
         console.log(typeof array);
 
+        const pi = 3.14;
+
+        //Array.isArray() 메서드: 값이 배열인지 구분하여 boolean으로 값 반환
         const result = Array.isArray(array) ? '배열입니다' : '배열이 아닙니다';
         console.log('array는' + result);
+
+        const arrResult = Array.isArray(pi);
+        console.log(arrResult);
+        console.log(Array.isArray(pi));
+
+        
     </script>
 </head>
 <body>

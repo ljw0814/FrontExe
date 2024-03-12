@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /*
+    객체 생성 3
+    1. object() 객체생성자 함수 사용 -> 생성 후 할당
+    2. 객체 리터털 방식 사용 -> 위의 방법보다 좋음, 직관적
+    */
+        // 빈 객체 생성    
+        var person1 = new Object();
+
+        // person1객체의 프로퍼티를 할당
+        person1.name = 'ljw'
+        person1.age = 28
+        person1.sayHello = function(){
+            console.log(this.name + 'Hello!');
+        }
+
+        console.log(person1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
