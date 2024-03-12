@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const h1 = (text) => `<h1>${text}</h1>`;
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('1번째 DOMContentLoaded 이벤트 발생');
+            document.body.innerHTML += h1 ('1번째 script 태그');
+
+        });
+
+        window.onlaad = function() {
+            console.log('2번째 load 이벤트 발생');
+            document.innerHTML += h1 ('2번째 script 태그');
+        };
+
+        window.addEventListener('load', function(){
+            console.log('3번째 load 이벤트 발생');
+            document.body.innerHTML += h1('3번째 laad 이벤트 발생');
+        });
+    </script>
+</head>
+
+<body>
+
+    
+</body>
+</html>
