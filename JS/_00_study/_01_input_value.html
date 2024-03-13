@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+    <style>
+        #todo-list-text{
+            width: 300px;
+            height: 600px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const input = document.querySelector('#id');
+            const addButton = document.querySelector('#addButton');
+
+            const addTodo = () => {
+                if(input.value.trim() === '' ) {
+                    alert('아무것도 입력하지 않았습니다. 문자를 입력해주세요.');
+                }
+            };
+            // Enter키 이벤트 리스터 추가
+            input.addEventListener('keydown', (event)=>{
+                if(event.key === 'Enter'){
+                    addTodo();
+                }
+            });
+            addButton.addEventListener('click', () =>{
+                addTodo();
+            });
+        });    
+
+    </script>
+<body>
+    <input id="id">
+    <button id="addButton">추가</button>
+    <div id="todo-list">todo list
+        <div id ="todo-list-text"></div>
+    </div>
+</body>
+</html>

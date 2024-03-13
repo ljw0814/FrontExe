@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 목록</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{ // 이 페이지가 로딩될 때 함수 실행
+            // 문서 객체를 가져옵니다.
+            const   = document.querySelector('#todo'); // id가 'todo'인 html 요소(입력필드)를 찾아 input변수에 할당
+            const todoList = document.querySelector('#todo-list');
+            const addButton = document.querySelector('#add-button');
+
+            // 변수 선언
+            let keyCount = 0;
+
+            // 함수 선언
+            const addTodo = () => {
+                // 사용자가 입력한 값이 띄어쓰기만 입력했는지, 값이 없는지 비교
+                if(input.value.trim() === ''){  // .value 속성은 입력된 값을 나타냄. trim() 메서드는 문자열 앞뒤 공백 제거
+                    // true 시 실행될 코드
+                    // alert : 웹페이지에 뜨는 작은 안내창
+                    alert('할 일을 입력해주세요.');
+                    return; // return문은 함수를 종료하고 함수 호출 지점으로 제어를 반환하는 역할, return 다음값이 없다면 'undefinde'가 반환됨
+                    //return 있어도 되고 없어도 되지만 사용한이유는 조건 충족 시 종료하기위해 사용.
+                    //return을 지우면 엔터 시 항목이 추가됨... 
+                }
+
+                // 동적 생성 Element
+                const item = document.createElement('div'); // HTML 문서에 새로운 div 요소 생성
+                const checkbox = document.createElement('input');
+                const text = document.createElement('span');
+                const button = document.createElement('button');
+
+                const key = keyCount++;       // 생성요소 식별 키
+
+                item.setAttribute('data-key', key); // HTML 요소에 데이터 속성(attribute)를 설정. 'data-key'이라는 데이터 속성을 추가하고 해당 값을 key로 설정
+                item.appendChild(checkbox);
+                item.appendChild(text);
+                item.appendChild(button);
+                todoList.appendChild(item);
+
+                checkbox.type = 'checkbox';
+                checkbox.addEventListener('change', (event)=>{
+                    item.style.textDecoration = event.target.checked ? 'line-through' : '';
+                });
+
+                text.textContent = input.value;
+
+                button.textContent = '제거하기';
+                button.addEventListener('click', ()=>{
+                    removeTodo(key);
+                });
+
+                input.value = '';   // 입력창을 비워둔다
+
+                input.focus();      // 포커스를 input창으로 다시 입력되게 
+            }
+
+            const removeTodo = (key)=>{
+                const item = document.querySelector(`[data-key="${key}"]`);
+                todoList.removeChild(item);
+            }
+
+            addButton.addEventListener('click', addTodo);
+            input.addEventListener('keyup', (event)=>{
+                const ENTER = 13;       // Enter키 입력 값
+                if(event.keyCode === ENTER)
+                    addTodo();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>할 일 목록</h1>
+    <!--
+    <input> 입력 창
+    -->
+    <input id="todo">
+    <button id="add-button">추가하기</button>
+    <div id="todo-list"></div> 
+</body>
+</html>

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.elementFromPoint('DOMContentLoaded', () =>{
-            const imgs = document.querySelector('img');
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const imgs = document.querySelectorAll('img');
 
             imgs.forEach((img)=>{
                 img.addEventListener('contextmenu', (event)=>{
-                    event.preventDefault();
+                    event.preventDefault();     // 해당 태그의 기본 동작을 막는다.
                 });
             });
         });
