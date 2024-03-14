@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 생성자 함수(객체를 생성하는 함수)
+        // 생성자 함수는 첫글자 대문자로 시작
+        function Circle(radius){
+            this.radius = radius;   //this 객체 내부에서 객체를 가리킬 때 사용
+           조// 객체 내에서 메서드를 정의할 때, 해당 메서드를 호출하는 객체에 대한 참조
+            /*
+            prototype에 메서드를 만들면
+            1개의 메서드가 생성되고
+            객체에서는 이 메서드를 공유하게 된다
+            즉, 객체 별로 따로 생성되지 않는다.
+            */
+            Circle.prototype.getArea = function(){
+                return Math.PI * this.radius ** 2; // 제곱 식
+            }
+        }
+
+        const circle1 = new Circle(3);
+        const circle2 = new Circle(5);
+
+        console.log(circle1.getArea === circle2.getArea); //true
+        console.log(circle1.getArea());
+        console.log(circle2.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

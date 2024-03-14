@@ -27,18 +27,22 @@
                                  함수의 중요도가 더 높다.  
                                  시대의 요구사항을 빠르게 적용하는데서 중요한 언어인 경우가 많다.         */
         let name = '홍길동';
-        document.write(name);
+        document.write(name + '<br>');
+        
         console.log(name);
         console.log(typeof(name));
         console.log(typeof name);
 
         let num = 100;
+        document.write(num + '<br>'); //ReferenceError: docment is not defined
         console.log(num);
         console.log(typeof(num));
-
+        console.log(typeof num);
         let val = true;
+        document.write(val)
         console.log(val);
         console.log(typeof(val));
+        console.log(typeof val);
     </script>
 </head>
 <body>
