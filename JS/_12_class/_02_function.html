@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const student = [];
+
+        student.push({name:'홍길동', kor:94, math:100, eng:80, sci:88});    // 이런 모음을 구조체라함
+        student.push({name:'홍길동', kor:94, math:100, eng:80, sci:88});
+        student.push({name:'홍길동', kor:94, math:100, eng:80, sci:88});
+        student.push({name:'홍길동', kor:94, math:100, eng:80, sci:88});
+
+        let output = '이름\t총점\t평균\n';
+        for(const s of student){
+            const sum = s.kor + s.eng + s.math + s.sci;
+            const average = sum / 4;
+            output += `${s.name}\t${sum}점\t${average}점\n`;
+        }
+        console.log(output);    // 이렇게 뽑아 사용했음
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

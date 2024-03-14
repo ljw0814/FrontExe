@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Square{
+            #length;
+
+            constructor(length){
+                this.setLength(length);
+            }
+            // setter
+            setLength(length){
+                if(length <= 0)
+                    throw '길이는 0보다 커야 합니다.';
+                this.#length = length;    
+                }
+            //getter
+            getLength(){
+                return this.#length;
+            }
+            getPerimeter(){
+                return 2* (this.width + this.height);
+            }
+            getArea(){
+                return this.width + this.height;
+            }
+        }
+
+        class Square extends Retangle{
+            constructor(length){
+                super(length, length);
+            }
+        }
+        
+        const Square = new Square(10);
+        //        Square.#length = -100; 접근이 안됨
+        Square.length = -100;   // #length에 값이 전달이 되지 않음, 그냥 동적추가 length필드
+        console.log(`정사각형의 둘레: ${Square.getPerimeter()}`);
+        console.log(`정사각형의 넓이: ${Square.getArea()}`);
+        Square.setLength(20);
+        console.log(`정사각형의 둘레: ${Square.getPerimeter()}`);
+        console.log(`정사각형의 넓이: ${Square.getArea()}`);
+        console.log(`정사각형의 한변의 길이: ${Square.getLength()}`);
+       
+        console.log(Square.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

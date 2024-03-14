@@ -7,7 +7,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', ()=>{ // 이 페이지가 로딩될 때 함수 실행
             // 문서 객체를 가져옵니다.
-            const   = document.querySelector('#todo'); // id가 'todo'인 html 요소(입력필드)를 찾아 input변수에 할당
+            const input = document.querySelector('#todo'); // id가 'todo'인 html 요소(입력필드)를 찾아 input변수에 할당
             const todoList = document.querySelector('#todo-list');
             const addButton = document.querySelector('#add-button');
 
@@ -33,13 +33,13 @@
                 const button = document.createElement('button');
 
                 const key = keyCount++;       // 생성요소 식별 키
-
-                item.setAttribute('data-key', key); // HTML 요소에 데이터 속성(attribute)를 설정. 'data-key'이라는 데이터 속성을 추가하고 해당 값을 key로 설정
-                item.appendChild(checkbox);
+                // 존재하지 않는 속성을 추가할 수 있음
+                item.setAttribute('data-key', key); // HTML 요소에 데이터 속성(attribute)를 설정. 'data-key'이라는 속성을 추가하고 해당 속성의 값을 key로 설정
+                item.appendChild(checkbox); // DOM에 새로운 자식 추가, 즉 item(부모요소)에 checkbox라는 자식 요수 추가
                 item.appendChild(text);
                 item.appendChild(button);
                 todoList.appendChild(item);
-
+                // 속성 설정, 즉 checkbox라는 변수의 속성을 checkbox(html)로 설정
                 checkbox.type = 'checkbox';
                 checkbox.addEventListener('change', (event)=>{
                     item.style.textDecoration = event.target.checked ? 'line-through' : '';
